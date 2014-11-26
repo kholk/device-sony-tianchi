@@ -21,6 +21,6 @@ TARGET_BOOTLOADER_BOARD_NAME := D5303
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4452501504
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --dt_dir device/sony/tianchi/dtbs/
+BOARD_MKBOOTIMG_ARGS += --dt_dir device/sony/tianchi/dtbs --dt_version 2
 BOARD_CUSTOM_MKBOOTIMG := mkqcdbootimg
 
