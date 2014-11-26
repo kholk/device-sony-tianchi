@@ -14,11 +14,13 @@
 
 include device/sony/yukon/BoardConfig.mk
 
+BOARD_RAMDISK_OFFSET := 0x03000000
+
 TARGET_BOOTLOADER_BOARD_NAME := D5303
 
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4452501504
 
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x03000000 --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dt_dir device/sony/tianchi/dtbs/
 BOARD_CUSTOM_MKBOOTIMG := mkqcdbootimg
 
